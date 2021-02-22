@@ -1,0 +1,20 @@
+component: koa
+name: dapp-version-control-api
+app: dapp-version-control-db
+
+inputs:
+  entryFile: sls.js #以您实际入口文件名为准
+  src:
+    src: ./
+    exclude:
+      - .env
+  region: ap-guangzhou
+  functionName: dapp-version-api # 云函数名称
+  runtime: Nodejs10.15
+  serviceName: dappVersionService # api网关服务名称
+  apigatewayConf:
+    protocols:
+      - http
+      - https
+    environment: release
+    enableCORS: true #  允许跨域
