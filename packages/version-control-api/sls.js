@@ -1,14 +1,18 @@
 const Koa = require('koa')
 const KoaRouter = require('koa-router')
-const sendFile = require('koa-sendfile')
-const path = require('path')
-
+const VersionController = require('./controller/version')
 const app = new Koa()
+const bodyParser = require('koa-bodyparser')
+
+app.use(bodyParser())
+
 const router = new KoaRouter()
 
 // Routes
-router.get(`/*`, async (ctx) => {
-  await sendFile(ctx, path.join(__dirname, 'index.html'))
+
+
+router.post(`/version`, async (ctx) => {
+  const userInfo = ctx.request.body
 })
 
 app.use(router.allowedMethods()).use(router.routes());
