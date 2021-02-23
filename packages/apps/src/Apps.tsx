@@ -27,7 +27,7 @@ function Apps ({ className = '' }: Props): React.ReactElement<Props> {
     () => getSystemChainColor(systemChain, systemName),
     [systemChain, systemName]
   );
-
+alert('new version')
   return (
     <>
       <GlobalStyle uiHighlight={uiHighlight} />
