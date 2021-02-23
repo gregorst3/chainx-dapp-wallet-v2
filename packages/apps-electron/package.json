@@ -3,6 +3,14 @@
   "main": "index.js",
   "private": true,
   "version": "0.68.2-19",
+  "build" : {
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "https://github.com/chainx-org/chainx-dapp-wallet-v2/releases"
+      }
+    ]
+  },
   "dependencies": {
     "@babel/core": "^7.12.8",
     "@babel/polyfill": "^7.12.1",
