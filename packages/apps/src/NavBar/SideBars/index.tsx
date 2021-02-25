@@ -136,7 +136,7 @@ function Sidebars ({ className = '', onClose, isCollapsed }: Props): React.React
     }else if(apiUrl === 'wss://mainnet.chainx.org/ws'){
       setNetInfo(t('Overseas Node'))
     }else{
-      setNetInfo(t('Test Node'))
+      setNetInfo(t('Custom Node'))
     }
   }, [apiUrl])
 
