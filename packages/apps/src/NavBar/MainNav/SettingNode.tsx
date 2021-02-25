@@ -19,7 +19,7 @@ function SettingNode() {
     }else if(apiUrl === 'wss://mainnet.chainx.org/ws'){
       setNetInfo(t('Overseas Node'))
     }else{
-      setNetInfo(t('Test Node'))
+      setNetInfo(t('Custom Node'))
     }
   }, [apiUrl])
 
